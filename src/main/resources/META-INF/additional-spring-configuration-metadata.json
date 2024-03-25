@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.datasource.read_username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.read_username'"
+  },
+  {
+    "name": "spring.datasource.read_url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.read_url'"
+  },
+  {
+    "name": "service.version",
+    "type": "java.lang.String",
+    "description": "A description for 'service.version'"
+  }
+]}
