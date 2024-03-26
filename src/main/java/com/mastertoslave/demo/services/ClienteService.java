@@ -18,9 +18,12 @@ public class ClienteService {
         this.clienteReadWriteRepository = clienteReadWriteRepository;
     }
 
-    @SuppressWarnings("null")
-    public void addCliente(ClienteModal clienteModal) {
+    public void addClienteMaster(ClienteModal clienteModal) {
         clienteReadWriteRepository.saveAndFlush(clienteModal);
+    }
+
+    public void addClienteSlave(ClienteModal clienteModal){
+        clienteReadOnlyRepository.saveAndFlush(clienteModal);
     }
 
     @SuppressWarnings("rawtypes")

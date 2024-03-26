@@ -18,9 +18,14 @@ public class ClienteController {
         this.clienteService = clienteService;
     }
 
-    @PostMapping(value = "/cliente/add", consumes = {"application/json"})
+    @PostMapping(value = "/cliente/add/master", consumes = {"application/json"})
     public void addCliente(@RequestBody ClienteModal clienteModal) {
-      clienteService.addCliente(clienteModal);
+      clienteService.addClienteMaster(clienteModal);
+    }
+
+    @PostMapping(value = "/cliente/add/slave", consumes = {"application/json"})  
+    public void addClienteSlave(@RequestBody ClienteModal clienteModal){
+        clienteService.addClienteSlave(clienteModal);
     }
 
     @SuppressWarnings("rawtypes")
